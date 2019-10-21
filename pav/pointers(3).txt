@@ -1,0 +1,138 @@
+Pointers :
+
+Section 1:
+
+1. Draw Memeory diagrams for the Below.
+2. If there is a Wrong Statement
+	1. Draw the memory diagram
+	2. explain what is wrong with statement
+	3. provide the correct Statement.
+
+1.
+
+int a;
+
+a = 40;
+
+2. 
+
+int a;
+int *a_ptr;
+
+a = 0;
+
+a_ptr = NULL;
+
+a = 40;
+
+*a_ptr = 80;
+
+a_ptr = &a;
+
+*a_ptr = 90;
+
+3.
+
+int a;
+int *iptr;
+int **ipptr;
+
+a = 0;
+iptr = NULL;
+iiptr = NULL;
+
+a = 40;
+
+iptr = &a;
+
+ipptr = &iptr;
+
+a = *iptr + **ipptr;
+
+5.
+
+float a;
+int *ptr;
+
+a = 10;
+
+ptr = &a;
+
+*ptr value ??
+
+*ptr = 10;
+
+a value ??
+
+6.
+
+what is NULL? (it is a Macro check the value)
+
+7.
+
+
+int a;
+
+int **ptr = NULL;
+
+*ptr = &a;
+
+**ptr = 20;
+
+
+8.
+
+int a;
+
+int **ptr = NULL;
+
+ptr = &a;
+
+**ptr = 30;
+
+9.
+
+int a[10];
+
+int *ptr = NULL;
+
+ptr = a;
+
+*ptr = 20;
+
+ptr++;
+
+*ptr = 25;
+
+
+10.
+
+int *ptr1;
+
+int *ptr2;
+
+ptr1 = malloc(10*sizeof(int));
+
+ptr2 = malloc(10*sizeof(int));
+
+*ptr1 = 30;
+
+*ptr2 = 50;
+
+free(ptr2)
+
+*ptr2 = 80;
+
+ptr1++;
+
+*ptr1 = 90;
+
+
+
+
+
+
+
+
+
+
