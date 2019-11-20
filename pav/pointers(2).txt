@@ -1,0 +1,293 @@
+Pointers :
+
+Section 1:
+
+1. Draw Memeory diagrams for the Below.
+2. If there is a Wrong Statement
+	1. Draw the memory diagram
+	2. explain what is wrong with statement
+	3. provide the correct Statement.
+
+1.
+
+int a;
+
+a = 40;
+
+2. 
+
+int a;
+int *a_ptr;
+
+a = 0;
+
+a_ptr = NULL;
+
+a = 40;
+
+*a_ptr = 80;
+
+a_ptr = &a;
+
+*a_ptr = 90;
+
+3.
+
+int a;
+int *iptr;
+int **ipptr;
+
+a = 0;
+iptr = NULL;
+iiptr = NULL;
+
+a = 40;
+
+iptr = &a;
+
+ipptr = &iptr;
+
+a = *iptr + **ipptr;
+
+5.
+
+float a;
+int *ptr;
+
+a = 10;
+
+ptr = &a;
+
+*ptr value ??
+
+*ptr = 10;
+
+a value ??
+
+6.
+
+what is NULL? (it is a Macro check the value)
+
+7.
+
+
+int a;
+
+int **ptr = NULL;
+
+*ptr = &a;
+
+**ptr = 20;
+
+
+8.
+
+int a;
+
+int **ptr = NULL;
+
+ptr = &a;
+
+**ptr = 30;
+
+9.
+
+int a[10];
+
+int *ptr = NULL;
+
+ptr = a;
+
+*ptr = 20;
+
+ptr++;
+
+*ptr = 25;
+
+
+10.
+
+int *ptr1;
+
+int *ptr2;
+
+ptr1 = malloc(10*sizeof(int));
+
+ptr2 = malloc(10*sizeof(int));
+
+*ptr1 = 30;
+
+*ptr2 = 50;
+
+free(ptr2)
+
+*ptr2 = 80;
+
+ptr1++;
+
+*ptr1 = 90;
+
+Section 2:
+
+1. What could be a possible error in the following code?
+ int* foo(int n){
+ int A[10], *x;
+ Strcpy(A,”guna”);
+ x = A;
+ return x;
+ }
+
+2. What can be wrong with the following code?
+ int A[10], i, *ptr;
+ for (i=0;i<10;i++)
+ ptr = A + i;
+ printf(“%d “, *(ptr+1)); 
+
+3.  What is wrong with the following code?
+ {char *s1 = "Hello, "; char *s2 = "world!"; char *s3 = strcat(s1, s2);}
+
+4 Explain why calling this function would not swap two
+ integers A and B.
+
+ void intswap(int x, int y){
+ int temp = x;
+ x = y;
+ y = temp;
+ }
+ int main(){
+ int A=10, B=20;
+ intswap(A,B);
+ } 
+
+Section 3:
+
+1. Draw Memeory diagrams for the Below.
+2. If there is a Wrong Statement
+	1. Draw the memory diagram
+	2. explain what is wrong with statement
+	3. provide the correct Statement.
+
+1.
+
+char *ptr = NULL;
+
+ptr = malloc(10 * sizeof(char));
+
+strcpy(ptr, "Hello");
+
+2.
+
+struct	student{
+char *name;
+int roll_no;
+int marks;
+};
+
+struct student A;
+
+a.name = malloc(20 * sizeof(char));
+
+fgets(a.name);
+
+a.roll_no = 30;
+a.marks = 65;
+
+3.
+
+struct	student{
+char *name;
+int roll_no;
+int marks;
+};
+
+struct student *a_ptr;
+
+a_ptr = malloc(sizeof(struct student));
+
+a_ptr->name = malloc(20 * sizeof(char));
+
+fgets(a_ptr->name);
+
+a_ptr->roll_no = 30;
+a_ptr->marks = 65;
+
+4.
+
+struct	student{
+char name[20];
+int roll_no;
+int marks;
+struct student *s_ptr;
+};
+
+struct student *a_ptr;
+
+a_ptr = malloc(sizeof(struct student));
+
+fgets(a_ptr->name);
+a_ptr->roll_no = 30;
+a_ptr->marks = 65;
+
+a_ptr->s_ptr = malloc(sizeof(struct student));  // Write Statements to read Name / Rollno and Marks for the current structure.
+
+//Read Name
+
+//Read Roll NO
+
+//Read Marks.
+
+// Allocate A new Student Record 
+
+
+5.
+Draw the memroy Digram for the below. 
+
+int swap_v(int a, int b)
+{
+
+	int temp;
+
+	temp = a;
+	a = b;
+	b = a;
+	
+	return 0;
+
+}
+
+int swap_p(int *a, int *b)
+{
+
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+	
+	return 0;
+
+}
+
+
+int a1 = 10;
+int b1 = 30;
+int c1 = 40;
+int d1 = 60;
+main()
+{
+//values of a1 and b1
+swap_v(a1,b1);
+//after returning values of a1 and b1
+
+//values of c1 and d1
+swap_p(c1,d1);
+//after returning values of c1 and d1
+	
+}
+
+
+
+================================================
+
+
+
